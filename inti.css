@@ -172,7 +172,7 @@ clip-path:polygon(100% 0,0 50%,100% 100%);
 .heart{
 position:absolute;
 left:50%;
-top:30px;
+top:45px;
 transform:translateX(-50%);
 width:55px;
 height:55px;
@@ -232,7 +232,7 @@ p{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 10px;
-    justify-items: center;
+    justify-content: center;
 }
 
 @keyframes jatuh{
