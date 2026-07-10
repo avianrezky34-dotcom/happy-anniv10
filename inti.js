@@ -62,3 +62,24 @@ typing();
 
 for(let i=0;i<150;i++){
 }
+
+const music = document.getElementById("music");
+
+let musicStarted = false;
+
+music.play()
+.then(() => console.log("Berhasil"))
+.catch(err => console.log("Gagal:", err));
+
+document.querySelectorAll(".next-btn").forEach(btn => {
+    btn.addEventListener("click", async () => {
+        if (!musicStarted) {
+            try {
+                await music.play();
+                musicStarted = true;
+            } catch (err) {
+                console.log(err);
+            }
+        }
+    });
+});
